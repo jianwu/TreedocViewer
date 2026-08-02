@@ -15,7 +15,7 @@
     "test:e2e:ui": "playwright test --ui",
     "build:v1": "cd ../v1 && yarn install --ignore-engines && V1_SUBDIRECTORY=1 NODE_OPTIONS=--openssl-legacy-provider yarn build-app",
     "deploy:prepare": "yarn build && yarn build:v1 && cp -r ../v1/dist/app dist/v1",
-    "deploy": "yarn deploy:prepare && gh-pages -d dist && gh-pages -d dist -r git@github.com:treedoc/treedoc.github.io.git -b master"
+    "deploy": "yarn deploy:prepare && gh-pages -d dist -r git@github.com:treedoc/TreedocViewer && gh-pages -d dist -r git@github.com:treedoc/treedoc.github.io.git -b master"
   },
   "dependencies": {
     "@codemirror/lang-javascript": "^6.2.5",
